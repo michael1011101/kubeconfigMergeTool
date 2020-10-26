@@ -1,0 +1,18 @@
+---
+apiVersion: v1
+kind: Config
+current-context: context_developer
+clusters:
+- cluster:
+    certificate-authority-data: ZGV2ZWxvcGVyCg==
+    server: https://fakeurl.developer.com
+  name: cluster_developer
+contexts:
+- context:
+    user: developer
+    cluseter: cluster_developer
+  name: context_developer
+users:
+- name: developer
+  user:
+    token: ZGV2ZWxvcGVyCg==
